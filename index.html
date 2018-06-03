@@ -15,55 +15,19 @@
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preload" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" as="font" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" as="font" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet">
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" as="style">
+    <link rel="preload" href="css/normalize.css" as="style" crossorigin>
+    <link rel="preload" href="css/skeleton.css" as="style" crossorigin>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/skeleton.css" rel="stylesheet">
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        // <!--
-        (function () {
-            var text = (function () {/*
-             ＿人人人人人人人人人人人人＿
-             ＞　welcome to furnace　＜
-             ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
-                 　　 ＿
-                 　　/ ｡ヽ
-                 　 ﾉ~(　|
-                 　ｚ彳 ノ
-                 　　/　(
-                 　 (　　＼＿
-                 　 |　　　　＼
-                 　 |　　　　　ヾﾂ
-                 　 ヽ　　　　　ﾉ
-                 　　 ＼　_＼　ﾉ
-                 　　 ＿)( ＿)(
-                 　　 ⌒⌒ ⌒⌒
-             🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-             */
-            }).toString().split('*')[1];
-            console.log(text);
-        })();
-
-        //noinspection JSUnusedGlobalSymbols
-        cheet('↑ ↑ ↓ ↓ ← → ← → b a', {
-            fail: function () {
-                cheet.reset('↑ ↑ ↓ ↓ ← → ← → b a');
-            },
-            done: function () {
-                var element = document.getElementsByTagName('body')[0];
-                element.style.background = "url('./images/d250g2.jpg') bottom center / cover no-repeat fixed";
-                element.style.visibility = 'hidden';
-                cheet.disable('↑ ↑ ↓ ↓ ← → ← → b a');
-            }
-        });
-        // -->
-    </script>
+    <link rel="preload" href="js/cheet.min.js" as="script" crossorigin></link>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -226,5 +190,48 @@
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- JS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/cheet.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // <!--
+        (function () {
+            var text = (function () {/*
+             ＿人人人人人人人人人人人人＿
+             ＞　welcome to furnace　＜
+             ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
+                 　　 ＿
+                 　　/ ｡ヽ
+                 　 ﾉ~(　|
+                 　ｚ彳 ノ
+                 　　/　(
+                 　 (　　＼＿
+                 　 |　　　　＼
+                 　 |　　　　　ヾﾂ
+                 　 ヽ　　　　　ﾉ
+                 　　 ＼　_＼　ﾉ
+                 　　 ＿)( ＿)(
+                 　　 ⌒⌒ ⌒⌒
+             🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+             */
+            }).toString().split('*')[1];
+            console.log(text);
+        })();
+
+        //noinspection JSUnusedGlobalSymbols
+        cheet('↑ ↑ ↓ ↓ ← → ← → b a', {
+            fail: function () {
+                cheet.reset('↑ ↑ ↓ ↓ ← → ← → b a');
+            },
+            done: function () {
+                var element = document.getElementsByTagName('body')[0];
+                element.style.background = "url('./images/d250g2.jpg') bottom center / cover no-repeat fixed";
+                element.style.visibility = 'hidden';
+                cheet.disable('↑ ↑ ↓ ↓ ← → ← → b a');
+            }
+        });
+        // -->
+    </script>
 </body>
 </html>
