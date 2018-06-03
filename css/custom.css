@@ -1,4 +1,8 @@
 /* custom css */
+html {
+    min-height: 100%;
+    position: relative;
+}
 
 body {
     background-image: none;
