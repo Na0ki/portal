@@ -174,7 +174,7 @@
                 <p class="description">Mastodon版 あひる焼くな bot</p>
             </div>
             <div>
-                <h5><a href="assets/logo.zip"">ahiru logo</a></h5>
+                <h5><a href="assets/logo.zip">ahiru logo</a></h5>
                 <p class="description">あひる焼くな各種ロゴ</p>
             </div>
         </div>
@@ -208,8 +208,8 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script type="text/javascript">
         // <!--
-        (function () {
-            var text = (function () {/*
+        (() => {
+            const text = (() => {/*
              ＿人人人人人人人人人人人人＿
              ＞　welcome to furnace　＜
              ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
@@ -233,11 +233,9 @@
 
         //noinspection JSUnusedGlobalSymbols
         cheet('↑ ↑ ↓ ↓ ← → ← → b a', {
-            fail: function () {
-                cheet.reset('↑ ↑ ↓ ↓ ← → ← → b a');
-            },
-            done: function () {
-                var element = document.getElementsByTagName('body')[0];
+            fail: () => cheet.reset('↑ ↑ ↓ ↓ ← → ← → b a'),
+            done: () => {
+                const element = document.getElementsByTagName('body')[0];
                 element.style.background = "url('./images/d250g2.jpg') bottom center / cover no-repeat fixed";
                 element.style.visibility = 'hidden';
                 cheet.disable('↑ ↑ ↓ ↓ ← → ← → b a');
