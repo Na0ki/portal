@@ -23,11 +23,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
 
-    <!-- JS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preload" as="script" href="https://cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js">
-    <script src="https://cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js" type="text/javascript"></script>
-
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
@@ -231,14 +226,36 @@
             console.log(text);
         })();
 
-        //noinspection JSUnusedGlobalSymbols
-        cheet('↑ ↑ ↓ ↓ ← → ← → b a', {
-            fail: () => cheet.reset('↑ ↑ ↓ ↓ ← → ← → b a'),
-            done: () => {
-                const element = document.body;
-                element.style.background = "url('./images/d250g2.jpg') bottom center / cover no-repeat fixed";
-                element.style.visibility = 'hidden';
-                cheet.disable('↑ ↑ ↓ ↓ ← → ← → b a');
+        // wait time for every key input
+        const wait = 1500;
+        // keycodes of ↑ ↑ ↓ ↓ ← → ← → b a
+        const command = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+        let timer = null;
+        let standby = true;
+        let index = 0;
+
+        document.addEventListener('keydown', (event) => {
+            if (standby && event.keyCode === command[index]) {
+                index++;
+
+                if (index >= command.length) {
+                    standby = false;
+                    index = 0;
+                    clearTimeout(timer);
+
+                    const element = document.body;
+                    element.style.background = "url('./images/d250g2.jpg') bottom center / cover no-repeat fixed";
+                    element.style.visibility = 'hidden';
+                } else {
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        index = 0;
+                    }, wait);
+                }
+            } else {
+                index = 0;
+                clearTimeout(timer);
             }
         });
         // -->
