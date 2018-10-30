@@ -235,7 +235,7 @@
         cheet('↑ ↑ ↓ ↓ ← → ← → b a', {
             fail: () => cheet.reset('↑ ↑ ↓ ↓ ← → ← → b a'),
             done: () => {
-                const element = document.getElementsByTagName('body')[0];
+                const element = document.body;
                 element.style.background = "url('./images/d250g2.jpg') bottom center / cover no-repeat fixed";
                 element.style.visibility = 'hidden';
                 cheet.disable('↑ ↑ ↓ ↓ ← → ← → b a');
