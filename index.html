@@ -16,7 +16,8 @@
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link id="raleway" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" lazyload>
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -205,9 +206,6 @@
     <script type="text/javascript">
         // <!--
         (() => {
-            const font = document.getElementById('raleway');
-            font.rel = 'stylesheet';
-
             const text = (() => {/*
              ＿人人人人人人人人人人人人＿
              ＞　welcome to furnace　＜
