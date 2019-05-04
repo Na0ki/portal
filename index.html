@@ -16,6 +16,7 @@
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link id="raleway" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -57,6 +58,7 @@
 
         body {
             background-image: none;
+            font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
 
         .container {
@@ -107,12 +109,6 @@
             width: 100%;
             bottom: 0;
             margin-bottom: 0;
-        }
-
-        @font-face {
-            font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-display: fallback;
-            src: url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
         }
     </style>
 </head>
@@ -209,6 +205,9 @@
     <script type="text/javascript">
         // <!--
         (() => {
+            const font = document.getElementById('raleway');
+            font.rel = 'stylesheet';
+
             const text = (() => {/*
              ＿人人人人人人人人人人人人＿
              ＞　welcome to furnace　＜
