@@ -1,7 +1,10 @@
 {
   "name": "Atelier Ahiru",
+  "short_name": "Atelier Ahiru",
   "start_url": "./index.html",
   "theme_color": "#ff0000",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
   "display": "standalone",
   "icons": [
     {
@@ -39,6 +42,11 @@
       "sizes": "192x192",
       "type": "image\/png",
       "density": "4.0"
+    },
+    {
+      "src": "images/splash.png",
+      "sizes": "512x512",
+      "type": "image\/png"
     }
   ]
 }
