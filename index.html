@@ -67,10 +67,6 @@
             padding-bottom: 60px;
         }
 
-        .custom-row {
-            margin-top: 5%
-        }
-
         a {
             text-decoration: none;
             font-weight: bold;
@@ -99,7 +95,10 @@
             pointer-events: none;
         }
 
-        div.links {
+        .links {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             margin-left: 0;
         }
 
@@ -110,6 +109,18 @@
             width: 100%;
             bottom: 0;
             margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .links {
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .link-item {
+                display: inline-block;
+                margin: 5px 0;
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -155,39 +166,15 @@
             </table>
         </div>
     </div>
-    <div class="row custom-row">
-        <div class="one-third column">
-            <h3>Works</h3>
-            <div>
-                <h5><a href="https://github.com/Na0ki/mikutter_slack">mikutter_slack</a></h5>
-                <p class="description">mikutter の Slack プラグイン</p>
-            </div>
-            <div>
-                <h5><a href="https://github.com/Na0ki/ahiru_yakuna">mikutter ahiru_yakuna</a></h5>
-                <p class="description">mikutter あひる焼くな bot プラグイン</p>
-            </div>
-            <div>
-                <h5><a href="https://github.com/Na0ki/ahiru_yakuna_don">ahiru_yakuna_don</a></h5>
-                <p class="description">Mastodon版 あひる焼くな bot</p>
-            </div>
-            <div>
-                <h5><a href="assets/logo.zip">ahiru logo</a></h5>
-                <p class="description">あひる焼くな各種ロゴ</p>
-            </div>
-        </div>
-        <div class="two-thirds column">
-            <h3>Links</h3>
-            <div class="one-third column links">
-                <h5><a href="https://github.com/Na0ki/">GitHub</a></h5>
-                <h5><a href="https://honobono-ahiru.hatenablog.com/">Blog</a></h5>
-                <h5><a href="https://twitter.com/ahiru3net">Twitter</a></h5>
-            </div>
-            <div class="one-third column links">
-                <h5><a href="https://www.slideshare.net/ahiru3">SlideShare</a></h5>
-                <h5><a href="https://speakerdeck.com/na0ki">SpeakerDeck</a></h5>
-                <h5><a href="https://yakuna.ahiru3.net/">Ahiruyaki</a></h5>
-                <h5><a href="http://amzn.asia/1BRlhWa">WishList</a></h5>
-            </div>
+    <div>
+        <h3>Links</h3>
+        <div class="links">
+            <h5 class="link-item"><a href="assets/logo.zip">ahiru logo</a></h5>
+            <h5 class="link-item"><a href="https://github.com/Na0ki/">GitHub</a></h5>
+            <h5 class="link-item"><a href="https://honobono-ahiru.hatenablog.com/">Blog</a></h5>
+            <h5 class="link-item"><a href="https://twitter.com/ahiru3net">Twitter</a></h5>
+            <h5 class="link-item"><a href="https://speakerdeck.com/na0ki">SpeakerDeck</a></h5>
+            <h5 class="link-item"><a href="http://amzn.asia/1BRlhWa">WishList</a></h5>
         </div>
     </div>
 </div>
