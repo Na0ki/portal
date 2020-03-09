@@ -14,18 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ff0000">
 
-    <!-- FONT
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" lazyload>
-
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
-
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
@@ -59,12 +47,18 @@
 
         body {
             background-image: none;
-            font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            background-color: #fdfdfd;
+            margin: 0;
         }
 
         .container {
-            margin-top: 10%;
+            margin: 3em 1em 0;
             padding-bottom: 60px;
+        }
+
+        h3 {
+            border-bottom: solid 3px black;
+            margin-bottom: 0.5em;
         }
 
         a {
@@ -78,49 +72,28 @@
         }
 
         p {
-            margin: 0 0 15px 0;
-        }
-
-        p.description {
-            margin-left: 10%;
-        }
-
-        h5 {
-            margin-bottom: 0;
+            margin: 0 0 0.5em 0;
         }
 
         img.icon {
-            width: 70%;
-            margin-top: 15%;
             pointer-events: none;
         }
 
-        .links {
-            display: grid;
-            grid-template-rows: repeat(2, 1fr);
-            grid-template-columns: repeat(3, 1fr);
-            margin-left: 0;
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin: 0 0 0.5em 0;
         }
 
         footer {
             text-align: center;
             position: absolute;
-            background: white;
             width: 100%;
             bottom: 0;
             margin-bottom: 0;
-        }
-
-        @media screen and (max-width: 768px) {
-            .links {
-                grid-template-rows: repeat(3, 1fr);
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .link-item {
-                display: inline-block;
-                margin: 5px 0;
-                font-size: 2.5rem;
-            }
         }
     </style>
 </head>
@@ -129,59 +102,58 @@
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
-    <div class="row">
-        <div class="one-third column">
+    <div>
+        <div>
+            <img class="icon" src="images/ahiru.svg" width="256px" height="256px" alt="ahiru">
+        </div>
+
+        <div>
             <h3>About</h3>
-            <p>趣味で Web アプリとか Android アプリ触ってる</p>
+            <p>プログラム書いたりしてる</p>
         </div>
-        <div class="one-third column">
-            <img class="icon" src="images/ahiru.svg" alt="ahiru">
-        </div>
-        <div class="one-third column">
+
+        <div>
             <h3>Profile</h3>
-            <table class="u-full-width">
-                <thead></thead>
-                <tbody>
+            <table>
                 <tr>
-                    <td>Name</td>
+                    <td>名前</td>
                     <td>ahiru, ahiru3net</td>
                 </tr>
                 <tr>
-                    <td>BirthDay</td>
-                    <td>24 May 1993</td>
+                    <td>誕生日</td>
+                    <td>1993年5月24日</td>
                 </tr>
                 <tr>
-                    <td>Location</td>
+                    <td>居場所</td>
                     <td>名古屋</td>
                 </tr>
                 <tr>
-                    <td>Status</td>
+                    <td>参加してる</td>
                     <td>
                         <p><a href="https://eject.kokuda.org">Ejectコマンドユーザー会</a></p>
                         <p><a href="https://mikutter.hachune.net">mikutter</a>のコミッタ</p>
                         <p><a href="https://social.mikutter.hachune.net">mikutter mastodon</a>の鯖管</p>
                     </td>
                 </tr>
-                </tbody>
             </table>
         </div>
     </div>
     <div>
         <h3>Links</h3>
-        <div class="links">
-            <h5 class="link-item"><a href="assets/logo.zip">ahiru logo</a></h5>
-            <h5 class="link-item"><a href="https://github.com/Na0ki/">GitHub</a></h5>
-            <h5 class="link-item"><a href="https://honobono-ahiru.hatenablog.com/">Blog</a></h5>
-            <h5 class="link-item"><a href="https://twitter.com/ahiru3net">Twitter</a></h5>
-            <h5 class="link-item"><a href="https://speakerdeck.com/na0ki">SpeakerDeck</a></h5>
-            <h5 class="link-item"><a href="http://amzn.asia/1BRlhWa">WishList</a></h5>
-        </div>
+        <ul>
+            <li><a href="assets/logo.zip">ahiru logo</a></li>
+            <li><a href="https://github.com/Na0ki/">GitHub</a></li>
+            <li><a href="https://honobono-ahiru.hatenablog.com/">Blog</a></li>
+            <li><a href="https://twitter.com/ahiru3net">Twitter</a></li>
+            <li><a href="https://speakerdeck.com/na0ki">SpeakerDeck</a></li>
+            <li><a href="http://amzn.asia/1BRlhWa">WishList</a></li>
+        </ul>
     </div>
 </div>
 
 <footer>
     <p>
-        <small>Copyright &copy; 2019 ahiru3net All Rights Reserved.</small>
+        <small>Copyright &copy; 2020 ahiru3net All Rights Reserved.</small>
     </p>
 </footer>
 
@@ -191,7 +163,6 @@
   <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script type="text/javascript">
-        // <!--
         (() => {
             const text = (() => {/*
              ＿人人人人人人人人人人人人＿
@@ -247,7 +218,6 @@
                 clearTimeout(timer);
             }
         });
-        // -->
     </script>
 </body>
 </html>
